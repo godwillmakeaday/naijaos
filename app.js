@@ -2,39 +2,6 @@
 (function () {
   "use strict";
 
-  /* ---- OPERATING CONDITIONS FEED ----------------------------------------
-     Indicative placeholders. Replace `SIGNALS` with a live data source
-     (NBS / CBN releases) when wiring production. Each value is illustrative
-     and must be verified against the latest official release before use.   */
-  var SIGNALS = {
-    asOf: "INDICATIVE PLACEHOLDERS · verify against latest NBS / CBN releases",
-    items: [
-      { label: "Headline inflation", value: "~mid-30s%", trend: "indicative", dir: "up" },
-      { label: "Food inflation",     value: "~high-30s%", trend: "indicative", dir: "up" },
-      { label: "Transport cost",     value: "elevated",  trend: "indicative", dir: "up" },
-      { label: "Naira / USD",        value: "four-figure", trend: "indicative", dir: "flat" },
-      { label: "PMS (petrol)",       value: "deregulated", trend: "watch pump", dir: "up" },
-      { label: "Policy rate",        value: "tightened", trend: "indicative", dir: "flat" }
-    ]
-  };
-
-  function renderSignals() {
-    var grid = document.querySelector("[data-signal-grid]");
-    if (!grid) return;
-    grid.innerHTML = SIGNALS.items.map(function (s) {
-      var arrow = s.dir === "up" ? "▲" : s.dir === "down" ? "▼" : "•";
-      return (
-        '<div class="cell">' +
-          '<div class="cell__label">' + s.label + "</div>" +
-          '<div class="cell__val">' + s.value + "</div>" +
-          '<div class="cell__trend ' + s.dir + '">' + arrow + " " + s.trend + "</div>" +
-        "</div>"
-      );
-    }).join("");
-    var stamp = document.querySelector("[data-signal-asof]");
-    if (stamp) stamp.textContent = SIGNALS.asOf;
-  }
-
   /* ---- MOBILE NAV -------------------------------------------------------- */
   function nav() {
     var btn = document.querySelector(".menu-btn");
@@ -119,7 +86,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    renderSignals();
     nav();
     lastUpdated();
     scrollSpy();

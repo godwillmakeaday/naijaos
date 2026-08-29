@@ -1,124 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>naijaOS — The Nigerian System</title>
-<meta name="description" content="naijaOS is a public system for reading Nigerian money, behaviour, institutions, and survival intelligence through doctrine and live diagnostic posts." />
-<link rel="stylesheet" href="assets/naijaos.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>naijaOS — Reading Nigeria as a system</title>
+<meta name="description" content="Working diagnostics of Nigerian money, fuel, food, FX, credit and everyday economic behaviour. Doctrine, system-posts, and instruments for decisions made inside a volatile operating environment.">
+<link rel="canonical" href="https://naijaos.io/">
+<meta property="og:title" content="naijaOS — Reading Nigeria as a system">
+<meta property="og:description" content="Working diagnostics of Nigerian money, fuel, food, FX and credit. Diagnosis kept separate from recommendation.">
+<meta property="og:url" content="https://naijaos.io/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f2f0eb;
+  --paper-deep:#e9e6df;
+  --ink:#16181c;
+  --ink-soft:#4a4f57;
+  --rule:#d5d0c6;
+  --signal:#1f6f5c;
+  --live:#9a3b28;
+  --sans:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:10}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ── status strip ── */
+.status{
+  border-bottom:1px solid var(--rule);background:var(--paper-deep);
+  font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.status .wrap{display:flex;gap:18px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.dot{color:var(--live)}
+
+/* ── masthead ── */
+header{border-bottom:1px solid var(--rule)}
+.masthead{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:26px 0 22px;flex-wrap:wrap}
+.mark{font-size:23px;font-weight:600;letter-spacing:-.03em;text-decoration:none}
+.mark b{font-weight:300}
+nav ul{display:flex;gap:20px;flex-wrap:wrap;list-style:none;margin:0;padding:0;
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+nav a{text-decoration:none;color:var(--ink-soft);padding-bottom:2px;border-bottom:1px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--signal)}
+
+/* ── hero ── */
+.hero{padding:76px 0 56px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin:0 0 22px}
+h1{font-size:clamp(34px,6.2vw,60px);line-height:1.04;letter-spacing:-.035em;font-weight:500;margin:0 0 26px;max-width:16ch}
+.lede{font-size:clamp(17px,2.2vw,20px);line-height:1.55;color:var(--ink-soft);max-width:60ch;margin:0}
+.lede strong{color:var(--ink);font-weight:500}
+
+/* ── the record: signature element ── */
+.record{border-bottom:1px solid var(--rule);background:var(--paper-deep)}
+.record .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;padding:0;
+  background:var(--rule);border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
+.cell{background:var(--paper-deep);padding:20px 22px}
+.cell dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 7px}
+.cell dd{margin:0;font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-.02em}
+.cell dd small{font-size:12px;font-weight:400;color:var(--ink-soft);letter-spacing:0}
+@media(max-width:720px){.record .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* ── sections ── */
+section{padding:64px 0;border-bottom:1px solid var(--rule)}
+.shead{display:flex;align-items:baseline;gap:16px;margin:0 0 8px}
+.shead .num{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--signal)}
+h2{font-size:clamp(24px,3.6vw,32px);line-height:1.15;letter-spacing:-.025em;font-weight:500;margin:0}
+.snote{color:var(--ink-soft);max-width:58ch;margin:14px 0 34px;font-size:16px}
+
+/* ── entries ── */
+.entries{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.entries li{border-bottom:1px solid var(--rule)}
+.entry{display:grid;grid-template-columns:104px 1fr;gap:24px;padding:22px 4px 24px;text-decoration:none;
+  transition:background .14s ease,padding-left .14s ease}
+.entry:hover{background:var(--paper-deep);padding-left:12px}
+@media(prefers-reduced-motion:reduce){.entry{transition:none}.entry:hover{padding-left:4px}}
+.ref{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--signal);padding-top:5px}
+.ref span{display:block;color:var(--ink-soft);margin-top:5px;letter-spacing:.04em}
+.entry h3{margin:0 0 7px;font-size:19px;line-height:1.32;font-weight:500;letter-spacing:-.015em}
+.entry p{margin:0;color:var(--ink-soft);font-size:15px;line-height:1.55;max-width:66ch}
+@media(max-width:620px){
+  .entry{grid-template-columns:1fr;gap:9px}
+  .ref{padding-top:0}
+  .ref span{display:inline;margin:0 0 0 10px}
+}
+
+/* ── instruments ── */
+.instruments{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:8px}
+.inst{background:var(--paper);padding:26px 24px 28px;text-decoration:none;transition:background .14s ease}
+.inst:hover{background:var(--paper-deep)}
+.inst .kind{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--signal);display:block;margin-bottom:14px}
+.inst h3{margin:0 0 9px;font-size:18px;font-weight:500;line-height:1.3;letter-spacing:-.015em}
+.inst p{margin:0;color:var(--ink-soft);font-size:14.5px;line-height:1.5}
+@media(max-width:760px){.instruments{grid-template-columns:1fr}}
+
+/* ── standard ── */
+.standard p{max-width:64ch;color:var(--ink-soft);font-size:16px}
+.standard p strong{color:var(--ink);font-weight:500}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.links a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-decoration:none;
+  border:1px solid var(--rule);padding:9px 16px;color:var(--ink)}
+.links a:hover{border-color:var(--ink);background:var(--paper-deep)}
+
+/* ── footer ── */
+footer{padding:52px 0 64px;font-size:14px;color:var(--ink-soft)}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+@media(max-width:720px){.fgrid{grid-template-columns:1fr;gap:30px}}
+footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink);margin:0 0 14px;font-weight:500}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent}
+footer a:hover{color:var(--ink);border-bottom-color:var(--rule)}
+.colophon{margin-top:46px;padding-top:22px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11px;letter-spacing:.03em;line-height:1.8}
+</style>
 </head>
-<body class="doctrine site-index">
-<div class="statusbar">
-  <div class="statusbar-inner">
-    <div class="status-left"><span><span class="live-dot"></span>SYSTEM LIVE</span><span>v.02 / 2026</span><span>Publicly Indexed</span></div>
-    <div class="status-right"><span>naijaOS</span><span>INDEX · Home</span></div>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="status">
+  <div class="wrap">
+    <span><span class="dot">●</span> System live</span>
+    <span>v.03 / 2026</span>
+    <span>Nigeria operating environment</span>
+    <span>Publicly indexed</span>
   </div>
 </div>
-<header class="masthead">
-  <div class="masthead-inner">
-    <a class="wordmark" href="index.html"><span class="mark">naija<span class="os">OS</span></span><span class="crumb">The Nigerian System</span></a>
-    <nav class="nav"><a href="#income">Income</a><a href="#doctrine">Doctrine</a><a href="#planned">Planned</a></nav>
+
+<header>
+  <div class="wrap masthead">
+    <a class="mark" href="/">naija<b>OS</b></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#doctrine">Doctrine</a></li>
+        <li><a href="#diagnostics">Diagnostics</a></li>
+        <li><a href="#instruments">Instruments</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="editorial.html">Standard</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
-<section class="index-head" id="start">
-  <div class="index-head-inner">
-    <div>
-      <div class="hero-kicker">Public operating layer / Nigeria</div>
-      <h1>Reading Nigeria as a <span class="em">system</span>.</h1>
-      <p class="deck">naijaOS is arranged as one chrome with two registers: founding doctrine for the deeper law of the system, and system-posts for live diagnostics of money, food, fuel, inflation, savings, FX, and everyday economic behaviour.</p>
+
+<main id="main">
+
+  <div class="hero wrap">
+    <p class="eyebrow">Public operating layer / Nigeria</p>
+    <h1>Reading Nigeria as a system.</h1>
+    <p class="lede">Nigeria is unstable, but not unreadable. naijaOS publishes working diagnostics of money, fuel, food, FX, credit and everyday economic behaviour — <strong>read the conditions before they become personal emergencies.</strong></p>
+  </div>
+
+  <div class="record">
+    <dl class="wrap">
+      <div class="cell"><dt>Doctrine</dt><dd>01</dd></div>
+      <div class="cell"><dt>Diagnostics</dt><dd>07</dd></div>
+      <div class="cell"><dt>Instruments</dt><dd>03</dd></div>
+      <div class="cell"><dt>Last release</dt><dd>S/09 <small>inflation</small></dd></div>
+    </dl>
+  </div>
+
+  <!-- ── doctrine ── -->
+  <section id="doctrine" class="wrap">
+    <div class="shead"><span class="num">§ 01</span><h2>Founding doctrine</h2></div>
+    <p class="snote">The governing text. It sets out why Nigeria runs on a survival operating system, why money is not wealth, and why procedure is the bridge between struggle and prosperity.</p>
+    <ul class="entries">
+      <li><a class="entry" href="naijaos-doctrine-wealth-without-a-story.html">
+        <span class="ref">DOC · 001<span>Doctrine</span></span>
+        <span>
+          <h3>Wealth Without a Story</h3>
+          <p>Why the same income produces a different life depending on the system it lands in — and what has to be built before money can hold.</p>
+        </span>
+      </a></li>
+    </ul>
+  </section>
+
+  <!-- ── diagnostics ── -->
+  <section id="diagnostics" class="wrap">
+    <div class="shead"><span class="num">§ 02</span><h2>System-posts</h2></div>
+    <p class="snote">Data-bearing diagnostics that read Nigerian money as a mechanism rather than as scattered headlines. Each one traces a transmission: what moves, what it moves next, and the lag between.</p>
+    <ul class="entries">
+
+      <li><a class="entry" href="naijaos-s01-fuel-food.html">
+        <span class="ref">S / 01<span>Income</span></span>
+        <span>
+          <h3>Why food prices keep rising</h3>
+          <p>The fuel-to-food transmission decoded — the lag at each stage, and why the March 2026 re-acceleration is the cleanest case study the system has produced.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s02-naira-dollar.html">
+        <span class="ref">S / 02<span>FX</span></span>
+        <span>
+          <h3>Naira to dollar in 2026 — what convergence really means</h3>
+          <p>NFEM, the parallel market, the spread as it stands, and what a narrowed gap actually changes for households and small businesses.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s03-pos.html">
+        <span class="ref">S / 03<span>Income</span></span>
+        <span>
+          <h3>Is the POS business still profitable?</h3>
+          <p>Float requirements, daily revenue ranges, the multi-surface rule, the location decay curve, and the death spiral that ends most agents who borrow through a slow week.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s04-ten-businesses.html">
+        <span class="ref">S / 04<span>Income</span></span>
+        <span>
+          <h3>Ten businesses to start with ₦100k to ₦500k</h3>
+          <p>Scored against three tests — fuel absorption, FX exposure, buffer requirement. Diagnostic, not aspirational.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s05-b02-dollar-paths.html">
+        <span class="ref">S / 05<span>FX</span></span>
+        <span>
+          <h3>Dollar-earning paths after FX convergence</h3>
+          <p>Remote employment, freelance contracting, dollar-billed services, export of expertise. Why each still pays at a narrowed spread, and the failure mode of each.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s07-savings-1.html">
+        <span class="ref">S / 07<span>Household</span></span>
+        <span>
+          <h3>Save in naira or save in dollars?</h3>
+          <p>An obligation-led framework, instrument by instrument from treasury bills to dollar wallets to real estate, with three worked archetypes.</p>
+        </span>
+      </a></li>
+
+      <li><a class="entry" href="naijaos-s09-inflation-march-2026.html">
+        <span class="ref">S / 09<span>Prices</span></span>
+        <span>
+          <h3>Inflation in Nigeria, March 2026</h3>
+          <p>A decomposition of the NBS CPI release — the eleven-month disinflation that preceded it, and the food and transport contributions that explain why the trend bent.</p>
+        </span>
+      </a></li>
+
+    </ul>
+  </section>
+
+  <!-- ── instruments ── -->
+  <section id="instruments" class="wrap">
+    <div class="shead"><span class="num">§ 03</span><h2>Instruments</h2></div>
+    <p class="snote">Three forms, three jobs. A briefing explains the environment, a playbook guides execution, a field card serves the decision you are making right now.</p>
+    <div class="instruments">
+      <a class="inst" href="briefing-01-income-environment.html">
+        <span class="kind">Briefing 01 · Read</span>
+        <h3>How money actually works in Nigeria</h3>
+        <p>The cash cycle, fuel as a price-setter, FX exposure, and why the same salary buys less each quarter.</p>
+      </a>
+      <a class="inst" href="playbook-pos-2026.html">
+        <span class="kind">Playbook · Do</span>
+        <h3>POS agency, 2026</h3>
+        <p>Setting up, sizing float, choosing a surface, and running the numbers that decide whether the agency survives its first slow month.</p>
+      </a>
+      <a class="inst" href="field-card-before-you-borrow.html">
+        <span class="kind">Field card FC-02 · Fast</span>
+        <h3>Before you borrow money</h3>
+        <p>What to confirm before the loan, and the trap that turns a small borrow into a long exposure.</p>
+      </a>
     </div>
-    <aside class="record-panel">
-      <div class="record-head"><span>Site Record</span><span>Static Vercel Pack</span></div>
-      <div class="record-row"><span>Author</span><strong>P. A. Magaji</strong></div>
-      <div class="record-row"><span>Mode</span><strong>HTML / CSS</strong></div>
-      <div class="record-row"><span>Articles</span><strong>8</strong></div>
-      <div class="record-row"><span>Version</span><strong>v.02 / 2026</strong></div>
-      <div class="record-row"><span>Status</span><strong>Ready for GitHub → Vercel</strong></div>
-    </aside>
-  </div>
-</section>
-<main>
-  <section id="doctrine">
-    <div class="section-head"><div><div class="label">Doctrine Register</div><h2>Founding texts</h2></div><p>These are the governing essays and conceptual documents. They carry the doctrinal weight of the project.</p></div>
-    <div class="article-grid"><a class="article-card" href="naijaos-doctrine-wealth-without-a-story.html">
-  <div class="top">
-    <div class="card-kicker">DOC · 001 / Doctrine</div>
-    <h3>Wealth Without a Story</h3>
-    <p>The founding doctrine of naijaOS: why Nigeria runs on a survival operating system, why money is not wealth, and why procedure is the bridge between struggle and prosperity.</p>
-  </div>
-  <div class="bottom"><span>doctrine</span><span>Open →</span></div>
-</a></div>
   </section>
-  <section id="income">
-    <div class="section-head"><div><div class="label">System-post Register</div><h2>Income and survival diagnostics</h2></div><p>Data-bearing articles that read Nigerian money as a mechanism rather than as scattered headlines.</p></div>
-    <div class="article-grid"><a class="article-card" href="naijaos-s01-fuel-food.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/01</div>
-    <h3>Why food prices keep rising — the fuel-to-food transmission, decoded.</h3>
-    <p>A working diagnostic of how fuel price moves become food price moves in Nigeria. The transmission mechanism, the lag at each stage, and why the March 2026 inflation re-acceleration is the cleanest case study the system has produced.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s02-naira-dollar.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/02</div>
-    <h3>Naira to dollar in 2026 — what convergence really means for your money.</h3>
-    <p>A working diagnostic of the naira-dollar relationship in 2026. NFEM, parallel market, the spread today, and what the narrowed gap actually changes for Nigerian households and small businesses.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s03-pos.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/03</div>
-    <h3>Is the POS business still profitable in Nigeria?</h3>
-    <p>A working diagnostic of POS agent banking in Nigeria for 2026. Float requirements, daily revenue ranges, the multi-surface rule, the location decay curve, and the death spiral that ends most agents who borrow through a slow week.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s04-ten-businesses.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/04</div>
-    <h3>Ten businesses to start with ₦100k to ₦500k — read after the briefing.</h3>
-    <p>Ten Nigerian businesses sized for ₦100k to ₦500k entry, scored against the three pillar tests: fuel absorption, FX exposure, buffer requirement. Diagnostic, not aspirational. Read after the briefing.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s05-b02-dollar-paths.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / B/02</div>
-    <h3>Dollar-earning paths after FX convergence .</h3>
-    <p>A diagnostic of how Nigerians can earn in dollars in 2026 — remote employment, freelance contracting, dollar-billed services, export of expertise, and the creator economy. Why each still pays even at a narrowed parallel-market spread, and what the failure mode…</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s07-savings-1.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/07</div>
-    <h3>Save in naira or save in dollars ? The 2026 calculus.</h3>
-    <p>The allocation question every Nigerian saver actually faces in 2026. Obligation-led framework, instrument-by-instrument coverage from treasury bills to dollar wallets to real estate, three worked archetypes, and the synthesis the framework actually recommends.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a>
-<a class="article-card" href="naijaos-s09-inflation-march-2026.html">
-  <div class="top">
-    <div class="card-kicker">SYS · 01 / Income / S/09</div>
-    <h3>Inflation in Nigeria, March 2026 — what the re-acceleration means.</h3>
-    <p>A focused decomposition of the March 2026 NBS CPI release. Headline at 15.38 percent, the eleven-month disinflation that preceded it, and the food and transport contributions that explain why the trend bent.</p>
-  </div>
-  <div class="bottom"><span>system post</span><span>Open →</span></div>
-</a></div>
+
+  <!-- ── standard ── -->
+  <section class="wrap standard">
+    <div class="shead"><span class="num">§ 04</span><h2>Source discipline</h2></div>
+    <p>naijaOS works from public information, official releases, and reported indicators. Every figure is dated and attributed to the release it came from. Where a number is contested or unverified, the page says so rather than smoothing it over.</p>
+    <p><strong>This is intelligence, not advice.</strong> naijaOS is not legal, financial, tax, or investment advice. Conditions change. Verify against current official sources before acting. Diagnosis is kept visibly separate from recommendation on every page, and corrections are published rather than quietly edited.</p>
+    <div class="links">
+      <a href="sources.html">Sources →</a>
+      <a href="editorial.html">Editorial standard →</a>
+    </div>
   </section>
-  <section id="briefing-01">
-    <div class="section-head"><div><div class="label">Briefing Anchor</div><h2>B/01 will sit here later</h2></div><p>The uploaded briefing file was intentionally excluded from this pack. Internal links now defer to this anchor until you add the briefing page back.</p></div>
-    <div class="note-box"><strong>Future anchor:</strong> How money actually works in Nigeria. When you are ready, add the briefing page as <code>briefing-01-income-environment.html</code> or convert it into a proper B/01 page, then update this index card.</div>
-  </section>
-  <section id="planned">
-    <div class="section-head"><div><div class="label">Planned Siblings</div><h2>Referenced but not yet shipped</h2></div><p>Some articles link to planned siblings that were not included in the upload. Those links now point here instead of breaking.</p></div>
-    <div class="note-box">Referenced future pages include the three-month buffer rule, multiple revenue surfaces, and why small businesses fail in Nigeria. This is good: the site already has a cluster logic. Add them only when the articles are strong enough to stand alone.</div>
-  </section>
+
 </main>
-<footer class="footer">
-  <div class="footer-inner"><div>naija<span class="os">OS</span> — The Nigerian System</div><div class="right"><span>INDEX · Home</span><span>© 2026 P. A. Magaji</span></div></div>
+
+<footer class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>naijaOS</h4>
+      <p style="margin:0;max-width:38ch">Working diagnostics of the Nigerian operating environment. Read the conditions before they become personal emergencies.</p>
+    </div>
+    <div>
+      <h4>Register</h4>
+      <ul>
+        <li><a href="#doctrine">Doctrine</a></li>
+        <li><a href="#diagnostics">System-posts</a></li>
+        <li><a href="#instruments">Instruments</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Standards</h4>
+      <ul>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="editorial.html">Editorial standard</a></li>
+        <li><a href="mailto:info@naijaos.io">info@naijaos.io</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="colophon">
+    © 2026 P. A. Magaji · naijaOS · Public intelligence, Nigeria operating environment<br>
+    Not legal, financial, tax, or investment advice. Verify official sources before acting.
+  </p>
 </footer>
+
 </body>
 </html>

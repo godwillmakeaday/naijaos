@@ -1,0 +1,15 @@
+/* NaijaOS visual asset system, scoped across pages */
+.naija-visual{margin:0 0 2.25rem;min-width:0;max-width:100%;background:#101b27;color:#f0eee5;border:1px solid #34505a;overflow:hidden;box-shadow:0 12px 36px rgba(7,22,28,.09)}
+.naija-visual__heading{padding:20px 24px 12px;border-bottom:1px solid rgba(240,238,229,.15)}
+.naija-visual__eyebrow{display:block;color:#d3a65d;font:600 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
+.naija-visual__heading h3{color:#f0eee5;font:500 clamp(20px,2.7vw,31px)/1.2 Georgia,serif;letter-spacing:-.02em;margin:0}
+.naija-visual__viewport{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-color:#d3a65d #101b27;scrollbar-width:thin}
+.naija-visual__viewport:focus-visible{outline:3px solid #d3a65d;outline-offset:-4px}
+.naija-visual__viewport img{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#101b27}
+.naija-visual figcaption{font:400 12px/1.75 Geist,Arial,sans-serif;color:#d6ddd9;border-top:1px solid rgba(240,238,229,.14);padding:13px 24px 16px;margin:0}
+.naija-visual figcaption a{display:inline-block;margin-left:7px;color:#f2c26e;text-decoration:underline;text-underline-offset:3px}
+.naija-visual figcaption a:focus-visible{outline:3px solid #f2c26e;outline-offset:4px}
+.naija-visual--corridor{margin-bottom:28px}.naija-visual--civic{margin-bottom:32px}
+@media(max-width:740px){.naija-visual{margin-bottom:26px;box-shadow:none}.naija-visual__heading{padding:16px 16px 12px}.naija-visual__viewport img{width:700px;max-width:none;min-width:700px;height:auto}.naija-visual figcaption{padding:13px 16px 17px;font-size:12px}.naija-visual figcaption a{margin-left:0;display:block;margin-top:8px;min-height:28px}}
+@media(prefers-reduced-motion:reduce){.naija-visual,.naija-visual *{scroll-behavior:auto!important;transition:none!important}}
+@media print{.naija-visual{break-inside:avoid;box-shadow:none}.naija-visual__viewport{overflow:visible}.naija-visual__viewport img{min-width:0!important;width:100%!important}}

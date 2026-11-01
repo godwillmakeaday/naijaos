@@ -1,0 +1,164 @@
+[
+  {
+    "number": 1,
+    "slug": "services",
+    "label": "Services",
+    "title": "What Can Someone Else Pay You to Do?",
+    "description": "What task can you do well for a particular buyer?",
+    "value": "A defined piece of work and your judgment.",
+    "prompts": [
+      "Define a first service",
+      "Prepare a relevant sample",
+      "Estimate the full delivery effort"
+    ],
+    "url": "/earning-from-nigeria/services",
+    "source": "content/earning-from-nigeria/01-services.md",
+    "minutes": 8,
+    "words": 1488,
+    "children": []
+  },
+  {
+    "number": 2,
+    "slug": "digital-products",
+    "label": "Digital products",
+    "title": "Create Once, Sell Repeatedly: Turning Knowledge into Useful Products",
+    "description": "What can someone purchase and use independently?",
+    "value": "A resource that helps complete a task.",
+    "prompts": [
+      "Choose one recurring task",
+      "Test a small resource",
+      "Plan corrections and updates"
+    ],
+    "url": "/earning-from-nigeria/digital-products",
+    "source": "content/earning-from-nigeria/02-digital-products.md",
+    "minutes": 9,
+    "words": 1619,
+    "children": []
+  },
+  {
+    "number": 3,
+    "slug": "teaching",
+    "label": "Teaching",
+    "title": "What You Know Can Help Someone Else Learn",
+    "description": "What should a learner become able to do?",
+    "value": "Explanation, practice and appropriate feedback.",
+    "prompts": [
+      "Define a learning outcome",
+      "Design a practical exercise",
+      "Test a short workshop"
+    ],
+    "url": "/earning-from-nigeria/teaching",
+    "source": "content/earning-from-nigeria/03-teaching.md",
+    "minutes": 9,
+    "words": 1700,
+    "children": []
+  },
+  {
+    "number": 4,
+    "slug": "subscriptions",
+    "label": "Subscriptions",
+    "title": "What Would Make Someone Pay You Again Next Month?",
+    "description": "Which need continues after the first month?",
+    "value": "Continuing access, research or participation.",
+    "prompts": [
+      "Identify a recurring need",
+      "Choose a sustainable schedule",
+      "Learn from renewal and departure"
+    ],
+    "url": "/earning-from-nigeria/subscriptions",
+    "source": "content/earning-from-nigeria/04-subscriptions.md",
+    "minutes": 8,
+    "words": 1518,
+    "children": []
+  },
+  {
+    "number": 5,
+    "slug": "licensing",
+    "label": "Licensing",
+    "title": "You Can Earn by Letting Others Use What You Create",
+    "description": "Who could use your original work in their own activities?",
+    "value": "Permission for an agreed use of existing work.",
+    "prompts": [
+      "Identify an organisational use",
+      "Describe adaptation and reuse",
+      "Prepare an identifiable resource version"
+    ],
+    "url": "/earning-from-nigeria/licensing",
+    "source": "content/earning-from-nigeria/05-licensing.md",
+    "minutes": 8,
+    "words": 1583,
+    "children": []
+  },
+  {
+    "number": 6,
+    "slug": "advertising",
+    "label": "Advertising",
+    "title": "When Your Audience Becomes Valuable to Advertisers",
+    "description": "Which business has a relevant reason to reach your readers?",
+    "value": "An agreed opportunity to present a commercial message.",
+    "prompts": [
+      "Understand the readership",
+      "Define a placement",
+      "Report only what the evidence supports"
+    ],
+    "url": "/earning-from-nigeria/advertising",
+    "source": "content/earning-from-nigeria/06-advertising.md",
+    "minutes": 8,
+    "words": 1493,
+    "children": []
+  },
+  {
+    "number": 7,
+    "slug": "sponsorship",
+    "label": "Sponsorship",
+    "title": "Who Might Pay to Support the Work You Publish?",
+    "description": "What useful project could an organisation help make possible?",
+    "value": "A defined association and agreed project benefits.",
+    "prompts": [
+      "Define one sponsorable project",
+      "Budget the full commitment",
+      "Set editorial responsibilities"
+    ],
+    "url": "/earning-from-nigeria/sponsorship",
+    "source": "content/earning-from-nigeria/07-sponsorship.md",
+    "minutes": 8,
+    "words": 1508,
+    "children": []
+  },
+  {
+    "number": 8,
+    "slug": "affiliate-referrals",
+    "label": "Affiliate referrals",
+    "title": "Earning from Recommendations You Can Stand Behind",
+    "description": "Can your experience help a reader assess a tool?",
+    "value": "The programme rewards qualifying referrals under its terms.",
+    "prompts": [
+      "Document actual experience",
+      "Check eligibility and programme terms",
+      "Explain incentives and limitations"
+    ],
+    "url": "/earning-from-nigeria/affiliate-referrals",
+    "source": "content/earning-from-nigeria/08-affiliate-referrals.md",
+    "minutes": 8,
+    "words": 1507,
+    "children": []
+  },
+  {
+    "number": 9,
+    "slug": "speaking",
+    "label": "Speaking",
+    "title": "When Your Perspective Becomes Something People Invite You to Share",
+    "description": "What can your perspective contribute to a particular audience?",
+    "value": "A prepared contribution to an event or discussion.",
+    "prompts": [
+      "Define a talk and its audience",
+      "Prepare a representative recording",
+      "Clarify preparation, recording and reuse"
+    ],
+    "url": "/earning-from-nigeria/speaking",
+    "source": "content/earning-from-nigeria/09-speaking.md",
+    "minutes": 9,
+    "words": 1616,
+    "children": []
+  }
+]

@@ -67,7 +67,7 @@ for route in ['/how-i-build-from-nigeria','/build-from-nigeria/project-brief']+[
 dest = ROOT/'downloads/how-i-build-from-nigeria'
 with zipfile.ZipFile(dest/'How_I_Build_from_Nigeria.zip') as z:
     assert z.testzip() is None
-    assert len(z.namelist()) == 16, z.namelist()
+    assert len(z.namelist()) == 18, z.namelist()
     for name in z.namelist():
         assert z.read(name) == (dest/name).read_bytes(), name
     for c in catalog:
@@ -84,4 +84,15 @@ assert 'Planned evaluation' in resolve(catalog[6]['url']).read_text()
 assert 'does not confirm a successful resolution' in resolve(catalog[2]['url']).read_text()
 for file in ['index.html','why-cant-we.html','new-possibilities.html']:
     assert '/how-i-build-from-nigeria' in (ROOT/file).read_text()
-print(json.dumps({'articles':13,'article_words':sum(c['words'] for c in catalog),'new_html_pages':len(pages),'local_links_and_fragments_checked':count,'zip_entries':16,'sitemap_routes':len(urls),'zip_sha256':hashlib.sha256((dest/'How_I_Build_from_Nigeria.zip').read_bytes()).hexdigest(),'result':'PASS'},indent=2))
+print(json.dumps({'articles':13,'article_words':sum(c['words'] for c in catalog),'new_html_pages':len(pages),'local_links_and_fragments_checked':count,'zip_entries':18,'sitemap_routes':len(urls),'zip_sha256':hashlib.sha256((dest/'How_I_Build_from_Nigeria.zip').read_bytes()).hexdigest(),'result':'PASS'},indent=2))
+
+# Evidence must survive into the web, text and offline editions.
+for index in (4,5,9):
+    web = resolve(catalog[index]['url']).read_text()
+    assert 'https://github.com/godwillmakeaday/naijaos/' in web
+    assert '<a href="https://' in web
+    assert '## Case record:' in (dest/f'{index+1:02}-{catalog[index]["slug"]}.md').read_text()
+record = json.loads((dest/'Verification_Record_20261101.json').read_text())
+assert hashlib.sha256((dest/'Possibility_Lab_Demonstration.txt').read_bytes()).hexdigest() == record['download_sha256']
+assert (ROOT/'assets/building-evidence/possibility-lab-demonstration.jpg').stat().st_size > 10000
+print('PASS: three evidence-backed cases, linked sources and exact demonstration hash')

@@ -53,11 +53,11 @@
     "slug": "using-ai-to-build-websites",
     "description": "Move from an idea to a bounded brief, a visible version and a checked result.",
     "group": 2,
-    "status": "Working method",
-    "note": "",
+    "status": "Documented project case",
+    "note": "Includes the live Possibility Lab, fixed source links and a dated synthetic browser demonstration. Not an independent outcome study.",
     "url": "/build-from-nigeria/using-ai-to-build-websites",
-    "words": 499,
-    "minutes": 3
+    "words": 845,
+    "minutes": 5
   },
   {
     "number": 6,
@@ -65,11 +65,11 @@
     "slug": "building-with-chatgpt",
     "description": "Purpose, technical assistance and the decisions that remain mine.",
     "group": 2,
-    "status": "Personal reflection",
-    "note": "",
+    "status": "Documented collaboration",
+    "note": "Distinguishes author direction from AI-assisted drafting, implementation and checking. Source records do not independently attribute every contribution.",
     "url": "/build-from-nigeria/building-with-chatgpt",
-    "words": 490,
-    "minutes": 3
+    "words": 871,
+    "minutes": 5
   },
   {
     "number": 7,
@@ -113,11 +113,11 @@
     "slug": "from-preview-to-live-website",
     "description": "The work between a convincing first version and a maintained public website.",
     "group": 4,
-    "status": "Publishing lessons",
-    "note": "",
+    "status": "Documented release case",
+    "note": "Links to a fixed release, reproducible checks and dated publication results. Availability checks do not establish reader impact or full accessibility.",
     "url": "/build-from-nigeria/from-preview-to-live-website",
-    "words": 475,
-    "minutes": 3
+    "words": 876,
+    "minutes": 5
   },
   {
     "number": 11,

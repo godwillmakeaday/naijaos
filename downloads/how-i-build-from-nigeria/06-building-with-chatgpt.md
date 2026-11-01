@@ -2,6 +2,8 @@
 
 By Paul A. Magaji
 
+Editorial context: Distinguishes author direction from AI-assisted drafting, implementation and checking. Source records do not independently attribute every contribution.
+
 When I say I use ChatGPT to build websites, the description can hide the most interesting part: how the work is divided.
 
 I bring a purpose and its circumstances. Through conversation, that purpose develops into a structure and something I can inspect. Sometimes I need help organising my thinking; sometimes technical assistance. At other times, I need to explain why a proposed direction misses the point.
@@ -51,3 +53,32 @@ ChatGPT helps me attempt more. My purpose is also to become a better director an
 ## A useful instruction to reuse
 
 Ask for a result together with its assumptions, changes made, checks performed and unresolved questions. Then examine the actual work. A confident account of completion needs evidence you can understand.
+
+
+## Case record: preserving NaijaOS while adding a section
+
+One decision from the New Possibilities work is concrete enough to examine. I wanted a section within NaijaOS, with the existing website and its design respected. My instruction concerned the relationship between the new idea and work already in place.
+
+The [published homepage](https://naijaos.io/) and [New Possibilities section](https://naijaos.io/new-possibilities) show the resulting arrangement. Readers can move between the existing operating-intelligence material, the essay collection and the new programme. The worksheet belongs within that wider inquiry.
+
+This illustrates a contribution I bring to AI-assisted work: deciding what the project is becoming and what must be preserved. The implementation then needs to be assessed against that direction. A working page alone would not establish that it fitted the intended project.
+
+## A source trail for the collaboration
+
+The [New Possibilities review record](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/docs/combined-release-review-20261031.md) distinguishes checks performed from checks still missing. It records keyboard interaction and accessibility-tree observations while explicitly leaving actual screen-reader use and real-device testing unresolved.
+
+The [collection release](https://github.com/godwillmakeaday/naijaos/pull/9) is another inspectable output of this collaboration. The editorial direction came from my account and requests; AI assisted drafting, implementation and verification. A repository records changes to files. It does not independently prove who conceived every idea or establish that I personally wrote the code.
+
+I want readers to understand that distinction when assessing my contribution.
+
+## What the record changed
+
+During preparation of this series, the recovered troubleshooting account identified Truehost where I had referred to Bluehost. The published article therefore names Truehost and leaves the outcome unresolved. That correction is evidence of an editorial decision; it is not independent verification of the original provider incident.
+
+The same care applies to the Lovable chapter. With no completed experiment established in the available account, it remains an evaluation plan. I would need actual use and a documented result before treating it as a hands-on review.
+
+## What I would ask a reader to judge
+
+Look at whether the instruction, implementation and published explanation agree. Examine the limitations and try the relevant task. If a claim exceeds what the evidence establishes, that is a useful criticism of the work.
+
+These project records support an account of how I direct and assess AI-assisted building. They do not establish independent technical certification, commercial success or an evaluation by outside users.

@@ -110,5 +110,21 @@
     "description": "What would we have to build for pride to be an everyday experience?",
     "source": "Pride_of_Africa.docx",
     "minutes": 8
+  },
+  {
+    "title": "When Loss Makes the Immediate Matter More",
+    "slug": "when-loss-makes-the-immediate-matter-more",
+    "group": 3,
+    "description": "Grief, present responsibilities and the future we hope to build.",
+    "source": "When_Loss_Makes_the_Immediate_Matter_More.docx",
+    "minutes": 7
+  },
+  {
+    "title": "Knowing the Lay of the Land",
+    "slug": "knowing-the-lay-of-the-land",
+    "group": 3,
+    "description": "Learning enough about conditions to act thoughtfully and revise the map.",
+    "source": "Knowing_the_Lay_of_the_Land.docx",
+    "minutes": 7
   }
 ]

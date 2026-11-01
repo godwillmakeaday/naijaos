@@ -1,0 +1,114 @@
+[
+  {
+    "title": "I Started with One Question",
+    "slug": "i-started-with-one-question",
+    "group": 0,
+    "description": "How a question about selling online became an inquiry into Nigeria.",
+    "source": "I_Started_with_One_Question.docx",
+    "minutes": 7
+  },
+  {
+    "title": "Before I Wanted Wealth, I Wanted Safety",
+    "slug": "before-wealth-safety",
+    "group": 0,
+    "description": "The search for security beneath the ambition to earn.",
+    "source": "Before_I_Wanted_Wealth_I_Wanted_Safety.docx",
+    "minutes": 7
+  },
+  {
+    "title": "By Fourteen I Had a Theory of Nigeria",
+    "slug": "by-fourteen",
+    "group": 0,
+    "description": "How childhood expectations shape the possibilities we notice.",
+    "source": "By_Fourteen_I_Had_a_Theory_of_Nigeria.docx",
+    "minutes": 6
+  },
+  {
+    "title": "The Magazine That Opened My World",
+    "slug": "the-magazine",
+    "group": 0,
+    "description": "Success Digest and the boundaries of a newly discovered world.",
+    "source": "The_Magazine_That_Opened_My_World.docx",
+    "minutes": 7
+  },
+  {
+    "title": "The Economy I Did Not Know Existed",
+    "slug": "the-unseen-economy",
+    "group": 0,
+    "description": "Discovering startups and where existing skills might belong.",
+    "source": "The_Economy_I_Did_Not_Know_Existed.docx",
+    "minutes": 7
+  },
+  {
+    "title": "When the Telephone Arrived, I Thought It Had Just Been Invented",
+    "slug": "when-the-telephone-arrived",
+    "group": 0,
+    "description": "The distance between what exists and what we can access.",
+    "source": "When_the_Telephone_Arrived.docx",
+    "minutes": 7
+  },
+  {
+    "title": "What Does Civil Service State Explain",
+    "slug": "civil-service-state",
+    "group": 1,
+    "description": "Enugu and the limits of regional economic labels.",
+    "source": "What_Does_Civil_Service_State_Explain.docx",
+    "minutes": 6
+  },
+  {
+    "title": "Why We Celebrate Wealth and Discourage the Attempt",
+    "slug": "wealth-and-the-attempt",
+    "group": 1,
+    "description": "Why uncertain beginnings can attract less support than finished success.",
+    "source": "Why_We_Celebrate_Wealth_and_Discourage_the_Attempt.docx",
+    "minutes": 7
+  },
+  {
+    "title": "The Rich Uncle Is Doing Several Institutions’ Jobs",
+    "slug": "the-rich-uncle",
+    "group": 1,
+    "description": "The support hidden inside a family relationship.",
+    "source": "The_Rich_Uncle.docx",
+    "minutes": 7
+  },
+  {
+    "title": "When Authority Means Pain",
+    "slug": "when-authority-means-pain",
+    "group": 1,
+    "description": "School punishment and the questions carried into adulthood.",
+    "source": "When_Authority_Means_Pain.docx",
+    "minutes": 7
+  },
+  {
+    "title": "Who Can Take Away What You Build",
+    "slug": "what-you-build",
+    "group": 1,
+    "description": "Ownership, dependence and the security of productive work.",
+    "source": "Who_Can_Take_Away_What_You_Build.docx",
+    "minutes": 7
+  },
+  {
+    "title": "A Factory Can Fit in One Room. An Industrial System Cannot.",
+    "slug": "one-room-factory",
+    "group": 2,
+    "description": "Aba and the productive relationships beyond the workshop walls.",
+    "source": "A_Factory_Can_Fit_in_One_Room.docx",
+    "minutes": 7
+  },
+  {
+    "title": "Why Can’t We Build a TSMC?",
+    "slug": "why-not-a-tsmc",
+    "group": 2,
+    "description": "How investment becomes lasting industrial capability.",
+    "source": "Why_Cant_We_Build_a_TSMC.docx",
+    "minutes": 8
+  },
+  {
+    "title": "Pride of Africa: What Would We Have to Build?",
+    "slug": "pride-of-africa",
+    "group": 2,
+    "description": "What would we have to build for pride to be an everyday experience?",
+    "source": "Pride_of_Africa.docx",
+    "minutes": 8
+  }
+]

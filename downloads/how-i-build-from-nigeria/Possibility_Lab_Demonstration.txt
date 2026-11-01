@@ -1,0 +1,24 @@
+NAIJAOS — POSSIBILITY BRIEF
+Prepared 2026-11-01
+User-authored working document; not independently assessed.
+
+POSSIBILITY
+Demonstration: publish a guide for a small business.
+
+PEOPLE AND PROBLEM
+A fictional shop owner needs a clear product list.
+
+EVIDENCE AND ASSUMPTIONS
+Synthetic example only; no customer study has been conducted.
+
+CONDITIONS FOR DELIVERY
+A phone, reviewed product information and a small test budget.
+
+RESPONSIBILITY AND CONSEQUENCES
+The owner reviews every price and removes private information.
+
+SMALLEST USEFUL TEST
+Ask one consenting reviewer to find three products; record mistakes.
+
+NEXT REVIEW
+Check sources, identify a reviewer and agree on a stopping rule before testing.

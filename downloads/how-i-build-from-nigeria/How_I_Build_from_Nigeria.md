@@ -237,6 +237,8 @@ For your next technical problem, keep these fields together: goal; exact failure
 
 By Paul A. Magaji
 
+Editorial context: Includes the live Possibility Lab, fixed source links and a dated synthetic browser demonstration. Not an independent outcome study.
+
 Many of my website projects begin as questions. How can people understand the systems shaping their lives? How can someone examine a property decision more carefully? How can financial knowledge become easier to apply?
 
 A question develops into an idea. Then I imagine somewhere a person could explore it and take a practical step.
@@ -288,11 +290,38 @@ My aim is a useful place, with clear writing, dependable tasks and a setup I can
 Describe one audience, one task, the information needed and the outcome expected. State which existing work must be preserved. Use that brief to assess the first version before adding more features.
 
 
+## Case record: the Possibility Lab
+
+The [live Possibility Lab](https://naijaos.io/new-possibilities#lab) gives this method a concrete example. My aim was to help someone move from an exciting idea towards a question they could test. I wanted it within the existing NaijaOS website, rather than replacing the work already there.
+
+The resulting worksheet asks six questions: the possibility, the people and problem, evidence and assumptions, delivery conditions, responsibility, and the smallest useful test. Those choices connect imagination with the practical questions I want NaijaOS to investigate.
+
+The implementation was AI-assisted. My contribution was the purpose, context and direction; I am not claiming to have personally written every line of code. The [published worksheet source](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/new-possibilities.html) lets a reader examine what was actually built.
+
+## A demonstration you can repeat
+
+On 1 November 2026, an AI-assisted desktop browser check used a fictional shop example to complete all six fields. Activating Prepare my brief with Enter revealed a structured output and completion message. The download completed, and the downloaded text preserved all six entries. Activating Clear entries with Enter emptied the fields and removed the generated result.
+
+You can inspect the [demonstration brief](https://naijaos.io/downloads/how-i-build-from-nigeria/Possibility_Lab_Demonstration.txt) and the [dated verification record](https://naijaos.io/downloads/how-i-build-from-nigeria/Verification_Record_20261101.json). These are project evidence, not a customer testimonial or an independent evaluation.
+
+To repeat the task, use fictional information, complete the six prompts, prepare the brief, download it and compare the file with your entries. Clear the form afterwards. Avoid confidential information.
+
+## What this example establishes
+
+The worksheet organises the user's answers; it does not assess whether the idea is viable. AI assisted the building process, but the visitor's worksheet does not call an AI model to generate advice. The source shows a text-assembly routine and an in-page download.
+
+The demonstration establishes a particular interaction and output in the review browser. It does not establish that the method improves business outcomes, or that every device and assistive technology works correctly. Actual Android, screen-reader and print-output checks remain unverified.
+
+This is the kind of account I want to produce: a purpose, an inspectable implementation, a repeatable task and a boundary around the result.
+
+
 ---
 
 # Building with ChatGPT: What I Do and What AI Does
 
 By Paul A. Magaji
+
+Editorial context: Distinguishes author direction from AI-assisted drafting, implementation and checking. Source records do not independently attribute every contribution.
 
 When I say I use ChatGPT to build websites, the description can hide the most interesting part: how the work is divided.
 
@@ -343,6 +372,35 @@ ChatGPT helps me attempt more. My purpose is also to become a better director an
 ## A useful instruction to reuse
 
 Ask for a result together with its assumptions, changes made, checks performed and unresolved questions. Then examine the actual work. A confident account of completion needs evidence you can understand.
+
+
+## Case record: preserving NaijaOS while adding a section
+
+One decision from the New Possibilities work is concrete enough to examine. I wanted a section within NaijaOS, with the existing website and its design respected. My instruction concerned the relationship between the new idea and work already in place.
+
+The [published homepage](https://naijaos.io/) and [New Possibilities section](https://naijaos.io/new-possibilities) show the resulting arrangement. Readers can move between the existing operating-intelligence material, the essay collection and the new programme. The worksheet belongs within that wider inquiry.
+
+This illustrates a contribution I bring to AI-assisted work: deciding what the project is becoming and what must be preserved. The implementation then needs to be assessed against that direction. A working page alone would not establish that it fitted the intended project.
+
+## A source trail for the collaboration
+
+The [New Possibilities review record](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/docs/combined-release-review-20261031.md) distinguishes checks performed from checks still missing. It records keyboard interaction and accessibility-tree observations while explicitly leaving actual screen-reader use and real-device testing unresolved.
+
+The [collection release](https://github.com/godwillmakeaday/naijaos/pull/9) is another inspectable output of this collaboration. The editorial direction came from my account and requests; AI assisted drafting, implementation and verification. A repository records changes to files. It does not independently prove who conceived every idea or establish that I personally wrote the code.
+
+I want readers to understand that distinction when assessing my contribution.
+
+## What the record changed
+
+During preparation of this series, the recovered troubleshooting account identified Truehost where I had referred to Bluehost. The published article therefore names Truehost and leaves the outcome unresolved. That correction is evidence of an editorial decision; it is not independent verification of the original provider incident.
+
+The same care applies to the Lovable chapter. With no completed experiment established in the available account, it remains an evaluation plan. I would need actual use and a documented result before treating it as a hands-on review.
+
+## What I would ask a reader to judge
+
+Look at whether the instruction, implementation and published explanation agree. Examine the limitations and try the relevant task. If a claim exceeds what the evidence establishes, that is a useful criticism of the work.
+
+These project records support an account of how I direct and assess AI-assisted building. They do not establish independent technical certification, commercial success or an evaluation by outside users.
 
 
 ---
@@ -522,6 +580,8 @@ Choose one question arising from the project. Study the relevant concept, attemp
 
 By Paul A. Magaji
 
+Editorial context: Links to a fixed release, reproducible checks and dated publication results. Availability checks do not establish reader impact or full accessibility.
+
 Seeing an idea become a page is exciting. Headings, sections and controls give a visible form to something that existed only in conversation.
 
 Then another stage begins. Where does the website live? How does the domain reach it? Do its links work? What happens on a phone? How will tomorrow’s correction reach the public version?
@@ -569,6 +629,37 @@ Publication begins continuing care: corrections, changing references and unexpec
 ## My release note
 
 For the next publication, I would record the version, intended audience, main tasks checked, content reviewed and unresolved limitations. I would identify how to correct or withdraw the change. That makes “live” a more meaningful statement than a page appearing somewhere online.
+
+
+## Case record: publishing this collection
+
+This collection provides a bounded example of moving from drafts to a live website. The scope was 13 articles, a reading guide and a companion project brief, integrated with NaijaOS's existing content.
+
+The [release pull request](https://github.com/godwillmakeaday/naijaos/pull/9) records the files and scope. The [merged release commit](https://github.com/godwillmakeaday/naijaos/commit/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19) identifies a fixed version a reader can inspect. This was an AI-assisted publication under my direction; it is not a claim that I hand-coded every page.
+
+The package included individual Markdown articles, a combined text edition, a self-contained HTML reading edition and a ZIP. The HTML edition contains its own styles and can be opened offline. Its online source links still require connectivity.
+
+## What was checked at release
+
+The local publication checks covered 13 article entries, 15 new HTML pages, the reading sequence and 307 local links and fragments. The original ZIP contained 16 files, checked against the packaged source. These counts describe that release; later additions can change them.
+
+After publication on 1 November 2026, an automated HTTP check visited 22 production routes, including all 13 articles, the collection, related pages, stylesheet and main downloads. Each returned HTTP 200. The downloaded ZIP matched the local package by SHA-256 hash.
+
+Those results establish availability and package correspondence at the time of checking. HTTP 200 alone does not establish that a page is understandable, accessible or useful.
+
+## Make the release inspectable
+
+The [collection builder](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/scripts/build-building-series.py) and [integrity checker](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/scripts/check-building-series.py) show how the edition was assembled and what the automated checks examined. Someone with Python and a copy of that repository version can repeat the local build and check.
+
+A reader can also open the [collection](https://naijaos.io/how-i-build-from-nigeria), follow an article's next link and compare its downloadable text with the page. The test is tied to an actual task rather than the appearance of the homepage alone.
+
+## Where the evidence stops
+
+Desktop browser review covered the layout, a first-article navigation and keyboard activation of its contents disclosure. It did not establish full accessibility conformance. Actual Android use, screen-reader navigation and the printed output remained unverified at that release.
+
+The edition has print styling, but the presence of that styling is not proof of a checked printed result. Nor does successful publication establish traffic, reader benefit or revenue. Those require different observations.
+
+This distinction is the lesson I want to preserve: describe the version, perform relevant checks and state precisely what their results support.
 
 
 ---

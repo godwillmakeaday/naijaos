@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-01",
+  "scope": "Owner-commissioned AI-assisted browser and source review; not an independent audit or customer study",
+  "reviewed_source_commit": "61357e3ad46dd3dd0d43e98903f1d4ebec4caf19",
+  "project_url": "https://naijaos.io/new-possibilities#lab",
+  "test_data": "Fictional demonstration; no customer or private information",
+  "demonstration_inputs": {
+    "idea": "Demonstration: publish a guide for a small business.",
+    "people": "A fictional shop owner needs a clear product list.",
+    "evidence": "Synthetic example only; no customer study has been conducted.",
+    "conditions": "A phone, reviewed product information and a small test budget.",
+    "responsibility": "The owner reviews every price and removes private information.",
+    "test": "Ask one consenting reviewer to find three products; record mistakes."
+  },
+  "verified": [
+    "All six labelled fields accepted demonstration text",
+    "Enter on Prepare my brief revealed output and completion status",
+    "Browser download completed",
+    "Downloaded text contains all six inputs and the user-authored limitation",
+    "Enter on Clear entries emptied all fields, removed output and hid result"
+  ],
+  "source_observations": [
+    "The worksheet script prevents form submission",
+    "The worksheet assembles the user entries into a text brief",
+    "The worksheet uses textContent to display the brief",
+    "The worksheet script contains no AI inference call or persistent storage call"
+  ],
+  "not_verified": [
+    "Real-device Android behaviour",
+    "Screen-reader speech or browse navigation",
+    "Print output",
+    "Independent usability or effectiveness study",
+    "Hosting speed or provider price comparison",
+    "Audience growth, revenue or customer outcomes"
+  ],
+  "download_sha256": "a23687bc0d6869a1f4769f6e3a65a076c94ead9ceab7d3378ca35a77fe67752f"
+}

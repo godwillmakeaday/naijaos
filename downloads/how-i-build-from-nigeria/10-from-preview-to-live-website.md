@@ -2,6 +2,8 @@
 
 By Paul A. Magaji
 
+Editorial context: Links to a fixed release, reproducible checks and dated publication results. Availability checks do not establish reader impact or full accessibility.
+
 Seeing an idea become a page is exciting. Headings, sections and controls give a visible form to something that existed only in conversation.
 
 Then another stage begins. Where does the website live? How does the domain reach it? Do its links work? What happens on a phone? How will tomorrow’s correction reach the public version?
@@ -49,3 +51,34 @@ Publication begins continuing care: corrections, changing references and unexpec
 ## My release note
 
 For the next publication, I would record the version, intended audience, main tasks checked, content reviewed and unresolved limitations. I would identify how to correct or withdraw the change. That makes “live” a more meaningful statement than a page appearing somewhere online.
+
+
+## Case record: publishing this collection
+
+This collection provides a bounded example of moving from drafts to a live website. The scope was 13 articles, a reading guide and a companion project brief, integrated with NaijaOS's existing content.
+
+The [release pull request](https://github.com/godwillmakeaday/naijaos/pull/9) records the files and scope. The [merged release commit](https://github.com/godwillmakeaday/naijaos/commit/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19) identifies a fixed version a reader can inspect. This was an AI-assisted publication under my direction; it is not a claim that I hand-coded every page.
+
+The package included individual Markdown articles, a combined text edition, a self-contained HTML reading edition and a ZIP. The HTML edition contains its own styles and can be opened offline. Its online source links still require connectivity.
+
+## What was checked at release
+
+The local publication checks covered 13 article entries, 15 new HTML pages, the reading sequence and 307 local links and fragments. The original ZIP contained 16 files, checked against the packaged source. These counts describe that release; later additions can change them.
+
+After publication on 1 November 2026, an automated HTTP check visited 22 production routes, including all 13 articles, the collection, related pages, stylesheet and main downloads. Each returned HTTP 200. The downloaded ZIP matched the local package by SHA-256 hash.
+
+Those results establish availability and package correspondence at the time of checking. HTTP 200 alone does not establish that a page is understandable, accessible or useful.
+
+## Make the release inspectable
+
+The [collection builder](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/scripts/build-building-series.py) and [integrity checker](https://github.com/godwillmakeaday/naijaos/blob/61357e3ad46dd3dd0d43e98903f1d4ebec4caf19/scripts/check-building-series.py) show how the edition was assembled and what the automated checks examined. Someone with Python and a copy of that repository version can repeat the local build and check.
+
+A reader can also open the [collection](https://naijaos.io/how-i-build-from-nigeria), follow an article's next link and compare its downloadable text with the page. The test is tied to an actual task rather than the appearance of the homepage alone.
+
+## Where the evidence stops
+
+Desktop browser review covered the layout, a first-article navigation and keyboard activation of its contents disclosure. It did not establish full accessibility conformance. Actual Android use, screen-reader navigation and the printed output remained unverified at that release.
+
+The edition has print styling, but the presence of that styling is not proof of a checked printed result. Nor does successful publication establish traffic, reader benefit or revenue. Those require different observations.
+
+This distinction is the lesson I want to preserve: describe the version, perform relevant checks and state precisely what their results support.

@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Transparent 24-month website cost worksheet for Nigerian businesses. Compare quoted WordPress and Next.js on Vercel implementation costs.">
+<title>Website Ownership Cost Worksheet | NaijaOS Decision Lab Draft</title>
+<style>
+:root{--paper:#f4f3ec;--forest:#143c2e;--ink:#172c25;--line:#d5dbcf;--muted:#53675b;--lime:#d5eea4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif}a{color:var(--forest)}:focus-visible{outline:3px solid #bd842f;outline-offset:3px}
+.wrap{max-width:1080px;width:calc(100% - 36px);margin:auto}header{background:var(--forest);color:white;padding:19px 0}header .wrap{display:flex;justify-content:space-between;gap:12px;align-items:center}header a{color:white;font-size:1.5rem;font-weight:800;letter-spacing:-.05em;text-decoration:none}header span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+main{padding:44px 0 70px}h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.1;letter-spacing:-.055em;max-width:900px;margin:16px 0}h2{font-size:1.55rem;margin:0 0 13px;letter-spacing:-.025em}h3{margin:0 0 18px}p{margin:0 0 15px}.lede{font-size:1.14rem;color:var(--muted);max-width:820px}.warn{background:#fff7df;border-left:4px solid #bb8537;padding:17px;margin:25px 0 35px;font-size:.89rem}.section{margin-top:36px}.layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:white;border:1px solid var(--line);padding:22px;border-radius:4px;min-width:0}.field{margin-bottom:14px}label{font-weight:650;font-size:.85rem;display:block;margin-bottom:5px}input,select{font:inherit;width:100%;border:1px solid #a7b6ab;border-radius:3px;padding:10px;background:white;color:var(--ink)}fieldset{border:0;margin:0}legend{font-weight:800;padding:0 0 18px;font-size:1.13rem}.controls{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:24px}.controls>div{width:195px}.button{background:var(--forest);color:white;border:0;padding:13px 22px;font:inherit;font-weight:750;border-radius:3px;margin-top:20px;cursor:pointer}.button:hover{background:#28563e}
+.result{margin-top:25px;border:1px solid #a6c19b;background:#e8f0df;padding:23px}.result[hidden]{display:none}.scores{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:15px 0}.amount{font-size:clamp(1.35rem,3vw,2rem);font-weight:800;display:block;letter-spacing:-.04em}.caption{font-size:.83rem;color:var(--muted)}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:510px;background:white}th,td{padding:10px;border:1px solid var(--line);text-align:left;font-size:.85rem}th{background:#d5eea4}.note{font-size:.84rem;color:var(--muted)}li{margin-bottom:8px}footer{background:var(--forest);color:#d6e6d6;padding:24px 0;font-size:.82rem}footer a{color:white}
+@media(max-width:760px){.layout,.scores{grid-template-columns:1fr}main{padding-top:28px}.controls>div{width:100%}}
+</style></head><body><header><div class="wrap"><a href="/">naijaOS</a><span>Decision Lab / research draft</span></div></header>
+<main class="wrap"><p><a href="/experiments/wordpress-vs-nextjs-nigeria">← Back to the architecture comparison</a></p>
+<h1>What will your business website really cost over two years?</h1>
+<p class="lede">A practical worksheet for comparing a WordPress-led website and a Next.js-on-Vercel implementation using the same scope and your own written quotes.</p>
+<div class="warn"><strong>Evidence status:</strong> This is an arithmetic tool, not independent price research. No vendor fees are pre-filled and results are never sent or stored by the tool. It excludes taxes, exchange-rate changes, transaction charges, discounted cash flow and major unforeseen scope changes. This draft is intentionally marked noindex.</div>
+<section class="section"><h2>How the calculation works</h2><p><strong>Base cost</strong> = one-time build + migration + months × (monthly hosting + monthly tools + maintenance hours × hourly rate). An optional percentage reserve is then added for planning. Quotes must be in <strong>one currency</strong> and reflect comparable requirements.</p>
+<p class="note">The contingency reserve is not a guaranteed expense and is not a verified prediction. Zero is acceptable only when there is genuinely no cost for that item.</p></section>
+<form id="estimate" class="section"><h2>Enter your own figures</h2><div class="controls">
+<div><label for="currency">Currency (no conversion)</label><select id="currency" name="currency"><option value="NGN">NGN — naira</option><option value="USD">USD — US dollar</option></select></div>
+<div><label for="months">Number of months</label><input id="months" name="months" type="number" min="1" max="120" step="1" required value="24"></div>
+<div><label for="reserve">Contingency reserve (%)</label><input id="reserve" name="reserve" type="number" min="0" max="50" step="0.5" required value="10"></div></div>
+<div class="layout"><fieldset class="panel"><legend>WordPress-led site</legend><div class="field"><label for="wp_setup">Initial design and development</label><input id="wp_setup" name="wp_setup" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="wp_migration">One-time content/data migration</label><input id="wp_migration" name="wp_migration" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="wp_hosting">Monthly hosting and infrastructure</label><input id="wp_hosting" name="wp_hosting" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="wp_tools">Monthly CMS/plugins/software services</label><input id="wp_tools" name="wp_tools" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="wp_supportHours">Monthly maintenance/support hours</label><input id="wp_supportHours" name="wp_supportHours" type="number" min="0" step="0.1" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="wp_supportRate">Support hourly rate</label><input id="wp_supportRate" name="wp_supportRate" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div></fieldset>
+<fieldset class="panel"><legend>Next.js on Vercel</legend><div class="field"><label for="nx_setup">Initial design and development</label><input id="nx_setup" name="nx_setup" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="nx_migration">One-time content/data migration</label><input id="nx_migration" name="nx_migration" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="nx_hosting">Monthly hosting and infrastructure</label><input id="nx_hosting" name="nx_hosting" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="nx_tools">Monthly CMS/plugins/software services</label><input id="nx_tools" name="nx_tools" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="nx_supportHours">Monthly maintenance/support hours</label><input id="nx_supportHours" name="nx_supportHours" type="number" min="0" step="0.1" required placeholder="Enter a quoted amount, or 0"></div>
+<div class="field"><label for="nx_supportRate">Support hourly rate</label><input id="nx_supportRate" name="nx_supportRate" type="number" min="0" step="0.01" required placeholder="Enter a quoted amount, or 0"></div></fieldset></div>
+<button type="submit" class="button">Calculate 24-month cost comparison</button>
+<p class="note" style="margin-top:12px">All 12 cost inputs are required; enter 0 where appropriate. Your inputs remain in your browser. The calculator uses no cookies, analytics, account or backend.</p><p id="error" role="alert"></p></form>
+<section class="result" id="results" hidden aria-live="polite"><h2>Computed ownership estimates</h2><div class="scores"><div><strong>WordPress estimate</strong><span class="amount" id="wp_total"></span><span class="caption" id="wp_monthly"></span></div><div><strong>Next.js estimate</strong><span class="amount" id="nx_total"></span><span class="caption" id="nx_monthly"></span></div></div><p id="summary"></p><div class="scroll"><table><thead><tr><th scope="col">Component</th><th scope="col">WordPress</th><th scope="col">Next.js</th></tr></thead><tbody id="details"></tbody></table></div><p class="note" style="margin-top:15px">The cheaper estimate is not necessarily the better website. Review maintenance risk, support, editing experience and business fit alongside cost.</p></section>
+<section class="section"><h2>How to make your comparison credible</h2><ol><li>Write one requirements brief covering publishing, design, user accounts, interactive features, speed and support.</li><li>Get real quotes covering the same features, usage and support response.</li><li>For commercial projects, avoid assuming Vercel's Hobby tier is suitable: its terms restrict it to personal noncommercial use.</li><li>Record how editors publish, how data is backed up, and how failures are repaired.</li><li>Verify taxes, actual billing currency, ongoing paid tools and vendor contract changes separately.</li></ol></section>
+<section class="section"><h2>Provider documentation consulted</h2><ul>
+<li><a href="https://wordpress.org/documentation/article/roles-and-capabilities/">WordPress roles and capabilities</a></li>
+<li><a href="https://wordpress.org/documentation/article/plugins-themes-auto-updates/">WordPress updates and backups</a></li>
+<li><a href="https://nextjs.org/docs/app/getting-started/linking-and-navigating">Next.js rendering and navigation documentation</a></li>
+<li><a href="https://vercel.com/docs/plans/hobby">Vercel Hobby eligibility and limitations</a></li>
+<li><a href="https://vercel.com/pricing">Vercel pricing</a> (published Pro starting rate is USD $20/month, before applicable tax and additional usage)</li></ul><p class="note">Documents reviewed 3 November 2026. Pricing can change. Neither the amount of a WordPress implementation nor the full cost of a Next.js project can be determined from a platform's entry-level hosting price.</p>
+<p class="note">NaijaOS AI-assisted research prototype. Human editorial and hands-on comparison pending; no sponsorship or paid rankings claimed.</p></section>
+</main><footer><div class="wrap">NaijaOS Decision Lab · Research prototype · <a href="/">Return to NaijaOS</a></div></footer>
+<script src="/assets/decision-cost-model.js"></script>
+<script>(function(){"use strict";
+const form=document.getElementById("estimate"),out=document.getElementById("results"),err=document.getElementById("error");
+const keys=["setup","migration","hosting","tools","supportHours","supportRate"];
+const format=(v,c)=>new Intl.NumberFormat(c==="NGN"?"en-NG":"en-US",{style:"currency",currency:c,maximumFractionDigits:2}).format(v);
+form.addEventListener("submit",function(e){e.preventDefault();out.hidden=true;err.textContent="";
+const data=new FormData(form),currency=data.get("currency");
+try{
+const read=(p)=>{const v={};for(const k of keys){const raw=data.get(p+"_"+k);if(raw===null||String(raw).trim()==="")throw Error("Enter every quoted amount, using 0 where appropriate.");v[k]=Number(raw)}return v;};
+const w=NaijaOSCostModel.estimateCosts(read("wp"),Number(data.get("months")),Number(data.get("reserve")));
+const n=NaijaOSCostModel.estimateCosts(read("nx"),Number(data.get("months")),Number(data.get("reserve")));
+if(!Number.isFinite(w.total)||!Number.isFinite(n.total))throw Error("Amounts are too large.");
+document.getElementById("wp_total").textContent=format(w.total,currency);
+document.getElementById("nx_total").textContent=format(n.total,currency);
+document.getElementById("wp_monthly").textContent="Monthly recurring: "+format(w.monthly,currency);
+document.getElementById("nx_monthly").textContent="Monthly recurring: "+format(n.monthly,currency);
+document.getElementById("summary").textContent=w.total===n.total?"Both estimates are equal.":w.total<n.total?"WordPress is lower by "+format(n.total-w.total,currency)+" under these assumptions.":"Next.js is lower by "+format(w.total-n.total,currency)+" under these assumptions.";
+const body=document.getElementById("details");body.replaceChildren();
+for(const [name,key] of [["One-time costs","oneTime"],["Recurring costs","recurring"],["Planning reserve","reserve"],["Total estimate","total"]]){const row=document.createElement("tr");for(const value of [name,format(w[key],currency),format(n[key],currency)]){const td=document.createElement("td");td.textContent=value;row.append(td)}body.append(row)}
+out.hidden=false;out.scrollIntoView({block:"nearest",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+}catch(ex){err.textContent=ex.message||"Check your inputs."}
+});
+})();</script>
+</body></html>

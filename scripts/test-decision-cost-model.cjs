@@ -1,0 +1,12 @@
+const assert=require("node:assert/strict");
+const {estimateCosts}=require("../assets/decision-cost-model.js");
+const wp={setup:100000,migration:0,hosting:10000,tools:5000,supportHours:2,supportRate:8000};
+const nx={setup:400000,migration:0,hosting:20000,tools:5000,supportHours:4,supportRate:8000};
+assert.equal(estimateCosts(wp).total,928400);
+assert.equal(estimateCosts(nx).total,1944800);
+assert.equal(estimateCosts(wp,1,0).total,131000);
+assert.throws(()=>estimateCosts({...wp,setup:-1}),/non-negative/);
+assert.throws(()=>estimateCosts({...wp,hosting:Infinity}),/non-negative/);
+assert.throws(()=>estimateCosts(wp,0),/Months/);
+assert.throws(()=>estimateCosts(wp,24,60),/Contingency/);
+console.log("Seven calculation checks passed");

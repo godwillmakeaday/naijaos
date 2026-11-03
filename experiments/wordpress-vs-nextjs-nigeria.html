@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="A NaijaOS editorial experiment comparing WordPress and Next.js on Vercel for Nigerian business websites, with a five-question decision worksheet.">
+<meta name="color-scheme" content="light">
+<title>WordPress vs Next.js for Nigerian Business Websites | NaijaOS Decision Lab (Draft)</title>
+<style>
+:root{--ink:#172c25;--forest:#143c2e;--paper:#f4f3ec;--muted:#53675b;--line:#d5dbcf;--lime:#d5eea4;--white:#fff;--gold:#e7af63}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:var(--forest)}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #c48937;outline-offset:3px}
+.wrapper{width:min(1120px,calc(100% - 40px));margin:auto}.smallcaps{font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700}.top{background:var(--forest);color:white}.top .wrapper{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}.top a{color:white;text-decoration:none}.wordmark{font-weight:800;font-size:1.5rem;letter-spacing:-.06em}.top-right{font-size:.8rem;color:#cbdcca}.intro{padding:68px 0 52px;border-bottom:1px solid var(--line)}.intro .smallcaps{color:#426a51}h1{font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.1;letter-spacing:-.055em;max-width:830px;margin:18px 0 22px}h2{font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:-.035em;line-height:1.2;margin:0 0 18px}h3{font-size:1.13rem;line-height:1.3;margin:0 0 12px}p{margin:0 0 16px}.lede{font-size:1.14rem;color:var(--muted);max-width:780px}.meta{font-size:.8rem;color:var(--muted);margin:21px 0 25px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-block;background:var(--forest);color:white;text-decoration:none;border:1px solid var(--forest);border-radius:4px;padding:12px 18px;font-size:.9rem;font-weight:700}.button.alt{color:var(--forest);background:transparent}.notice{margin-top:28px;border-left:4px solid #c18b38;padding:14px 20px;background:#fff7e6;font-size:.84rem}.layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:50px;padding:45px 0 75px}main section{padding:31px 0;border-bottom:1px solid var(--line)}main section:first-child{padding-top:0}main section:last-child{border:0}.panel{background:white;border:1px solid var(--line);border-radius:6px;padding:24px}.panel ul{margin:0;padding-left:22px}.panel li{margin:7px 0}.answer{background:#e5efd8;border-left:4px solid var(--forest);padding:19px;margin-top:20px}.muted{color:var(--muted);font-size:.89rem}.scroll-table{overflow-x:auto;background:white;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;min-width:650px;font-size:.85rem;text-align:left}th,td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#e5efd8}tr:last-child td{border:0}.cells{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.cells>div{background:white;border:1px solid var(--line);padding:20px}.cells p{margin:0;font-size:.89rem;color:var(--muted)}.tool{background:var(--forest);color:white;padding:30px;border-radius:6px;scroll-margin-top:24px}.tool .smallcaps{color:var(--lime)}.tool .muted{color:#d5e4d9}.question{border-top:1px solid #4d6959;padding-top:16px;margin-top:16px}label{display:block;font-weight:650;font-size:.92rem;margin-bottom:8px}select{font:inherit;display:block;background:white;color:#172c25;width:100%;border:1px solid #a5b6ad;border-radius:4px;padding:12px}.tool button{font:inherit;font-weight:800;border:0;background:var(--lime);color:var(--forest);padding:13px 18px;border-radius:4px;margin-top:22px;cursor:pointer}.tool button:hover{background:#e5f5c3}#result{background:#eff6e3;border-left:4px solid var(--gold);color:#172c25;margin-top:20px;padding:20px}#result[hidden]{display:none}.result-title{font-size:1.25rem;font-weight:800}.faq details{border-top:1px solid var(--line);padding:16px 0}.faq summary{font-weight:700;cursor:pointer}.faq details p{padding-top:10px;color:var(--muted)}aside{align-self:start;position:sticky;top:18px}aside a{display:block;text-decoration:none;font-size:.82rem;margin-top:9px}aside p{font-size:.88rem;color:var(--muted)}.last{background:#e5efd8;padding:23px}.footer{background:#172c25;color:#c7dacc;padding:30px 0;font-size:.81rem}.footer a{color:white}
+@media(max-width:800px){.layout{display:block}aside{display:none}.intro{padding:45px 0}.cells{grid-template-columns:1fr}.tool{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-9999px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
+<header class="top"><div class="wrapper"><a class="wordmark" href="/">naijaOS</a><div class="top-right">Decision Lab / Research preview</div></div></header>
+<div class="intro"><div class="wrapper"><div class="smallcaps">Website decisions · Nigeria · Research preview</div>
+<h1>WordPress vs Next.js on Vercel for Nigerian business websites</h1>
+<p class="lede">Which setup suits your business? Compare publishing workflows, bespoke features, technical support and total cost—then use the five-question worksheet to clarify your requirements.</p>
+<p class="meta">NaijaOS editorial pilot · Draft dated 3 November 2026 · Authorship and firsthand research pending verification</p>
+<div class="buttons"><a class="button" href="#tool">Try the decision worksheet</a><a class="button alt" href="#comparison">View the comparison</a></div>
+<div class="notice"><strong>Not a published review.</strong> This draft is not a tested performance ranking, procurement recommendation or commercial endorsement. Its comparison statements are hypotheses to verify. This page is intentionally marked <code>noindex</code> pending editorial approval.</div>
+</div></div>
+<div class="wrapper layout"><main id="main">
+<section id="summary"><div class="panel"><h2>Key takeaways</h2><ul>
+<li><strong>Start with your use case.</strong> A content site, a custom software product, and a mixed publishing-and-tools business require different capabilities.</li>
+<li><strong>WordPress</strong> may be a useful starting point for organizations needing conventional editorial control by nontechnical staff.</li>
+<li><strong>Next.js deployed on Vercel</strong> may suit custom digital workflows supported by an engineering team.</li>
+<li><strong>A hybrid</strong> may make sense when an editorial operation also requires specialized software.</li>
+<li><strong>Neither approach guarantees search visibility, security, speed or lower cost.</strong> The implementation and maintenance plan matter.</li></ul></div>
+<div class="answer"><strong>Short answer:</strong> Evaluate WordPress first for content-heavy sites run by nontechnical editors. Evaluate Next.js on Vercel when tailored functionality is central and development support exists. For both publishing and complex tools, assess a hybrid before deciding.</div></section>
+<section id="definitions"><h2>What exactly are we comparing?</h2><p>WordPress is a content-management system. Next.js is a web framework, and Vercel is a deployment and hosting platform. They are not equivalent standalone products. Here we compare <em>website delivery approaches</em>, not an individual CMS against a hosting provider.</p><p>Judge each option against editing workflows, custom functionality, ongoing security, backup ownership, costs, data portability and local support—not a slogan about one platform being universally superior.</p></section>
+<section id="method"><h2>How the pilot makes its comparisons</h2><p>We identify five buyer questions before scoring any solution:</p><ol><li>Will staff need to publish and edit frequently?</li><li>Does the project need a custom product or interactive application?</li><li>Who can maintain and secure the system?</li><li>What is the realistic total cost over the next two years?</li><li>How easily can the business move its content and data?</li></ol><p class="muted">Research status: this draft is based on product categories and published documentation. No head-to-head implementation benchmark, independent vendor pricing study or user interview has yet been completed. Numeric performance and price scores are deliberately excluded.</p></section>
+<section id="comparison"><h2>Comparison at a glance</h2><div class="scroll-table"><table><thead><tr><th scope="col">Decision factor</th><th scope="col">WordPress-led approach</th><th scope="col">Next.js on Vercel</th><th scope="col">What to verify</th></tr></thead><tbody>
+<tr><th scope="row">Everyday editing</th><td>Built-in CMS workflow; evaluate actual roles and editor experience.</td><td>Requires an editorial solution, such as an integrated CMS or custom workflow.</td><td>Ask staff to publish and revise a sample page.</td></tr>
+<tr><th scope="row">Custom functionality</th><td>Plugins and custom work can extend capabilities.</td><td>Framework supports bespoke applications.</td><td>Prototype the hardest workflow, not the easiest.</td></tr>
+<tr><th scope="row">Maintenance</th><td>Ongoing updates, plugin review, backups and security configuration.</td><td>Engineering maintenance, dependencies, deployment and operational support.</td><td>Assign a named maintainer and recovery process.</td></tr>
+<tr><th scope="row">Budget</th><td>Hosting, design, extensions, vendor support and maintenance.</td><td>Development, hosting, services and continued engineering.</td><td>Compare written 24-month costs for identical requirements.</td></tr>
+<tr><th scope="row">Search</th><td>Can support search-friendly publishing when configured well.</td><td>Can support search-friendly pages when rendered, crawled and configured well.</td><td>Inspect real rendered pages, metadata, links and indexing.</td></tr>
+</tbody></table></div><p class="muted">Qualitative hypotheses only: no independently measured vendor scores or rankings.</p></section>
+<section id="best-for"><h2>Best suited to: match the site to the business</h2><div class="cells">
+<div><h3>Content-led service business</h3><p>Evaluate WordPress if many nontechnical people must update pages without a developer.</p></div>
+<div><h3>Software-like service</h3><p>Evaluate Next.js when user accounts, dashboards or complex custom workflows are central.</p></div>
+<div><h3>Publisher plus tools</h3><p>Evaluate a CMS and specialized tool combination; calculate the integration burden.</p></div>
+<div><h3>Small team with limited support</h3><p>Clarify who will patch, restore and troubleshoot the chosen system before purchasing.</p></div>
+</div></section>
+<section id="tool"><div class="tool"><div class="smallcaps">Interactive, privacy-first prototype</div><h2>Five-question website decision worksheet</h2><p class="muted">All responses stay in your browser for this calculation. No data is sent, stored or tracked by this prototype. This is a rule-based prompt for planning, not an independent product test.</p>
+<form id="questions">
+<div class="question"><label for="goal">1. Primary purpose</label><select id="goal" name="goal"><option value="content">Publish articles and business information</option><option value="app">Provide interactive digital services</option><option value="mixed">Publish content and provide interactive tools</option></select></div>
+<div class="question"><label for="edit">2. Who edits the content?</label><select id="edit" name="edit"><option value="team">Nontechnical staff</option><option value="dev">Developer or engineering team</option><option value="both">Both groups</option></select></div>
+<div class="question"><label for="features">3. Feature complexity</label><select id="features" name="features"><option value="basic">Pages, forms, ordinary publishing</option><option value="advanced">Custom dashboards, logic or user accounts</option><option value="both">Basic pages and advanced tools</option></select></div>
+<div class="question"><label for="support">4. Available technical support</label><select id="support" name="support"><option value="low">Little developer availability</option><option value="high">Reliable developer or technical team</option></select></div>
+<div class="question"><label for="priority">5. First-release priority</label><select id="priority" name="priority"><option value="editing">Content publishing and easy editing</option><option value="build">Custom functionality</option></select></div>
+<button type="submit">Show my starting-point recommendation</button>
+</form><div id="result" aria-live="polite" role="status" hidden></div>
+</div></section>
+<section class="faq" id="faq"><h2>Frequently asked questions</h2>
+<details><summary>Is WordPress always cheaper?</summary><p>No. Compare the full cost of development, paid add-ons, maintenance, support, hosting and later changes.</p></details>
+<details><summary>Does deploying on Vercel improve Google ranking by itself?</summary><p>No. Hosting does not guarantee ranking. Useful content, crawlability, rendering, links, accessibility and performance remain relevant.</p></details>
+<details><summary>Can WordPress power interactive features?</summary><p>Yes, through plugins and bespoke development. Assess reliability and maintenance for the actual features required.</p></details>
+<details><summary>Can Next.js support nontechnical editors?</summary><p>Yes, if a suitable CMS or editing workflow is added, implemented and tested.</p></details>
+<details><summary>Does this worksheet pick a vendor for me?</summary><p>No. It identifies which architecture to investigate first. Obtain comparable proposals and test a representative workflow before buying.</p></details>
+</section>
+<section id="sources"><h2>References and evidence gaps</h2><p>Start with <a href="https://wordpress.org/documentation/">WordPress documentation</a>, <a href="https://nextjs.org/docs">Next.js documentation</a>, <a href="https://vercel.com/docs">Vercel documentation</a> and <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google's people-first content guidance</a>.</p><p class="muted">Publication gate: add verifiable firsthand screenshots from actual builds, 24-month cost examples with assumptions, source access dates, named human editorial review, an accurate byline, and disclosure of any commercial interests. Do not backdate publication or invent performance figures.</p></section>
+<section><div class="last"><h2>Make the next decision smaller.</h2><p>The useful next step is a requirements brief and a real prototype—not guessing from a fashionable technology label.</p><a class="button" href="#tool">Return to the worksheet</a></div></section>
+</main><aside><div class="panel"><h3>Decision navigation</h3><p>Structured answers and a small interactive tool for a real business decision.</p><a href="#summary">Key takeaways</a><a href="#method">Methodology</a><a href="#comparison">Comparison</a><a href="#best-for">Best suited to</a><a href="#tool">Decision worksheet</a><a href="#faq">Questions</a><a href="#sources">References</a></div></aside></div>
+<footer class="footer"><div class="wrapper"><strong>NaijaOS / Decision Lab</strong><p>This is an unindexed research pilot. Nothing here is sponsored or a paid ranking. <a href="/">Return to NaijaOS</a>.</p></div></footer>
+<script>
+(function(){
+ const form=document.getElementById('questions'),out=document.getElementById('result');
+ form.addEventListener('submit',function(e){
+ e.preventDefault();
+ const a=Object.fromEntries(new FormData(form).entries());let wp=0,nx=0;
+ if(a.goal==='content')wp+=3;else if(a.goal==='app')nx+=3;else{wp++;nx++}
+ if(a.edit==='team')wp+=3;else if(a.edit==='dev')nx+=2;else{wp++;nx++}
+ if(a.features==='basic')wp+=2;else if(a.features==='advanced')nx+=3;else{wp++;nx++}
+ if(a.support==='low')wp++;else nx++;
+ if(a.priority==='editing')wp++;else nx++;
+ let title,reason;
+ if(a.goal==='mixed'||(a.edit==='team'&&a.features==='advanced')){title='Evaluate a hybrid setup';reason='You need straightforward editorial control and specialized features. Compare a CMS plus a separate application with a single-system build, including integration and security costs.'}
+ else if(wp>=nx+2){title='Investigate WordPress first';reason='Your answers favor a managed publishing workflow. Validate roles, maintenance, plugins, backups and total cost before choosing.'}
+ else if(nx>=wp+2){title='Investigate Next.js on Vercel first';reason='Your answers favor custom software and development resources. Validate editing, maintenance, security and hosting costs before choosing.'}
+ else{title='Shortlist both approaches';reason='There is no clear winner from these answers. Produce one requirements brief and ask for two comparable proposals.'}
+ out.replaceChildren();
+ const h=document.createElement('p');h.className='result-title';h.textContent=title;
+ const p=document.createElement('p');p.textContent=reason;
+ const note=document.createElement('small');note.textContent='Illustrative rules, not a verified recommendation or predictive model.';
+ out.append(h,p,note);out.hidden=false;
+ out.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+ });
+})();
+</script>
+</body></html>
